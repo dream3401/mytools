@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+	<title>首页</title>
+	<script src="https://cdn.rawgit.com/chrisvfritz/5f0a639590d6e648933416f90ba7ae4e/raw/98739fb8ac6779cb2da11aaa9ab6032e52f3be00/currency-validator.js"></script>
+</head>
+<body id='body'>
+	<div id="app">
+		<div>{{message}}</div>
+		<select v-model="currentView">
+			<option v-for="view in views" :value="view">{{view}}</option>
+		</select>
+		<component v-bind:is='currentView'>
+		</component>
+		<comp-table v-bind:items="tableData"></comp-table>
+	</div>
+	<div id="mount-point"></div>
+
+</body>
+</html>
