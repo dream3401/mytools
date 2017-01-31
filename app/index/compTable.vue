@@ -1,5 +1,5 @@
 <template>
-	<table v-if="items.length">
+	<table border=1 v-if="items.length">
 		<tr>
 			<th v-for="(value,key) in items[0]">{{key}}</th>
 		</tr>
